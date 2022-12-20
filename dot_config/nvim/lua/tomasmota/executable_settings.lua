@@ -29,3 +29,4 @@ opt.termguicolors = true
 -- Install win32yank.exe, put this in, and nothing else
 opt.clipboard = "unnamedplus"
 
+opt.signcolumn="yes"
