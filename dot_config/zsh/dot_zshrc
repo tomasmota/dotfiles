@@ -1,0 +1,37 @@
+export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME=$HOME/.config
+
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(git
+zsh-autosuggestions
+zsh-syntax-highlighting
+docker
+kubectl)
+
+source $ZSH/oh-my-zsh.sh
+
+. /usr/local/bin/z.sh
+
+bindkey ^n autosuggest-accept # Use <ctrl>n for accepting sugestion
+setopt menu_complete
+
+# ZSH settings (helpful for wsl)
+ZSH_HIGHLIGHT_MAXLENGTH=60
+ZSH_HIGHLIGHT_DIRS_BLACKLIST=(/mnt/c)
+
+function load_if_exists(){
+    test -f $1 && source $1
+}
+
+load_if_exists "$XDG_CONFIG_HOME/zsh/aliases.zsh" # Load common aliases
+load_if_exists "$XDG_CONFIG_HOME/zsh/local.zsh"   # Load configuration local to this machine
+
+eval "$(starship init zsh)"
+
+alias luamake=/luamake
+
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
