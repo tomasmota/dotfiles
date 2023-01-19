@@ -72,7 +72,9 @@ lspconfig.sumneko_lua.setup{
 }
 
 -- markdown
-lspconfig.marksman.setup{}
+lspconfig.marksman.setup{
+    require('cmp').setup.buffer { enabled = false }
+}
 
 lspconfig.rust_analyzer.setup{
     vim.api.nvim_create_autocmd("BufWritePost", {
