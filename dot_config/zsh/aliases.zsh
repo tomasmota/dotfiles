@@ -1,6 +1,6 @@
 # Quick file edit
 alias editrc="chezmoi edit $XDG_CONFIG_HOME/zsh/.zshrc"
-alias loadrc="source ~/.zshrc"
+alias loadrc="source $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # Git
 alias gc='git commit --signoff -m'
