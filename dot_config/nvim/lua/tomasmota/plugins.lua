@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
     -- requires locate (sudo apt install locate)
     use 'cljoly/telescope-repo.nvim'
     use {
-      "folke/todo-comments.nvim",
+      'folke/todo-comments.nvim',
       requires = "nvim-lua/plenary.nvim",
       config = function()
         require("todo-comments").setup {}
@@ -84,13 +84,20 @@ return require('packer').startup(function(use)
     }
 
     use {
-      "folke/which-key.nvim",
+      'folke/which-key.nvim',
       config = function()
         require("which-key").setup()
       end
     }
 
-    use "mbbill/undotree"
-    use "tpope/vim-fugitive"
+    use 'mbbill/undotree'
+    use 'tpope/vim-fugitive'
+
+    use {
+      'echasnovski/mini.move',
+      config = function()
+        require("mini.move").setup()
+      end
+    }
 end)
 
