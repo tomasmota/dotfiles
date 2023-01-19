@@ -24,8 +24,8 @@ function load_if_exists(){
     test -f $1 && source $1
 }
 
-load_if_exists "$XDG_CONFIG_HOME/zsh/aliases.zsh" # Load common aliases
-load_if_exists "$XDG_CONFIG_HOME/zsh/local.zsh"   # Load configuration local to this machine
+load_if_exists "$XDG_CONFIG_HOME/zsh/aliases.zsh"   # Load common aliases
+load_if_exists "$XDG_CONFIG_HOME/zsh/functions.zsh" # Load common functions
 load_if_exists "$XDG_CONFIG_HOME/zsh/local.zsh"     # Load configuration local to this machine
 
 eval "$(starship init zsh)"
