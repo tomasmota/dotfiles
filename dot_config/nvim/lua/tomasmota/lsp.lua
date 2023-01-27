@@ -83,6 +83,8 @@ lspconfig.rust_analyzer.setup{
     })
 }
 
+lspconfig.tsserver.setup{}
+
 -- nvim.lsp_signature setup
 require('lsp_signature').setup({
     hint_prefix = "🌟 ",
