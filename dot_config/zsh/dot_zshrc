@@ -5,6 +5,7 @@ export EDITOR=nvim
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git
+z
 zsh-autosuggestions
 zsh-syntax-highlighting
 docker
