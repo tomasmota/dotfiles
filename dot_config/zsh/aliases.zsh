@@ -13,6 +13,9 @@ alias tfa='terraform apply'
 alias tfd='terraform destroy'
 alias tfs='terraform show'
 
+# Yarn
+alias yd='yarn dev'
+
 # Generic
 alias nv='nvim'
 alias k='kubectl'
