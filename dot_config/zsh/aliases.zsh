@@ -16,6 +16,9 @@ alias tfs='terraform show'
 # Yarn
 alias yd='yarn dev'
 
+# Files
+alias cdf='cd $(fd --type directory | fzf)'
+
 # Generic
 alias nv='nvim'
 alias k='kubectl'

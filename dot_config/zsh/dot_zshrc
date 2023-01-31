@@ -9,6 +9,7 @@ z
 zsh-autosuggestions
 zsh-syntax-highlighting
 docker
+fzf
 kubectl)
 
 source $ZSH/oh-my-zsh.sh
