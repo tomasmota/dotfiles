@@ -86,7 +86,7 @@ lspconfig.rust_analyzer.setup{
 lspconfig.tsserver.setup{
     capabilities = capabilities,
     on_attach = function()
-        vim.keymap.set("n", "<leader>ff", "<cmd>!yarn prettier --write .<cr><cr>", { noremap = true })
+        vim.keymap.set("n", "<leader>ff", "<cmd>!yarn prettier --write %<cr><cr>", { noremap = true })
     end,
 }
 

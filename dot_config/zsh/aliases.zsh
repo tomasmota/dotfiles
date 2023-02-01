@@ -19,7 +19,10 @@ alias yd='yarn dev'
 # Files
 alias cdf='cd $(fd --type directory | fzf)'
 
+# Chezmoi
+alias cm='chezmoi'
+alias cme='chezmoi edit --apply'
+
 # Generic
 alias nv='nvim'
 alias k='kubectl'
-alias cm='chezmoi'
