@@ -50,7 +50,7 @@ lspconfig.terraformls.setup{
         vim.o.softtabstop = 2
         vim.o.shiftwidth = 2
         vim.o.expandtab = true
-        vim.keymap.set("n", "<leader>tf", "<cmd>!terraform fmt -recursive<cr>", { noremap = true })
+        vim.keymap.set("n", "<leader>ff", "<cmd>!terraform fmt -recursive<cr><cr>", { noremap = true })
         -- vim.api.nvim_create_autocmd({"BufWritePre"}, {
         --     pattern = {"*.tf", "*.tfvars"},
         --     callback = vim.lsp.buf.formatting_sync,
@@ -83,7 +83,12 @@ lspconfig.rust_analyzer.setup{
     })
 }
 
-lspconfig.tsserver.setup{}
+lspconfig.tsserver.setup{
+    capabilities = capabilities,
+    on_attach = function()
+        vim.keymap.set("n", "<leader>ff", "<cmd>!yarn prettier --write .<cr><cr>", { noremap = true })
+    end,
+}
 
 -- nvim.lsp_signature setup
 require('lsp_signature').setup({
