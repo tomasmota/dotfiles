@@ -15,6 +15,7 @@ alias tfs='terraform show'
 
 # Yarn
 alias yd='yarn dev'
+alias yf='yarn prettier --write .'
 
 # Files
 alias cdf='cd $(fd --type directory | fzf)'
