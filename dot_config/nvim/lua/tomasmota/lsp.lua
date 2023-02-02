@@ -86,8 +86,17 @@ lspconfig.rust_analyzer.setup{
 lspconfig.tsserver.setup{
     capabilities = capabilities,
     on_attach = function()
+        vim.o.tabstop = 2
+        vim.o.softtabstop = 2
+        vim.o.shiftwidth = 2
+        vim.o.expandtab = true
         vim.keymap.set("n", "<leader>ff", "<cmd>!yarn prettier --write %<cr><cr>", { noremap = true })
     end,
+}
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+lspconfig.jsonls.setup {
+  capabilities = capabilities
 }
 
 -- nvim.lsp_signature setup
