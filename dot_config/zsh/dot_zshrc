@@ -30,6 +30,14 @@ load_if_exists 'exports'   # Load common aliases
 load_if_exists 'functions' # Load common functions
 load_if_exists 'local'     # Load configuration local to this machine
 
+# FZF
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
+
 eval "$(starship init zsh)"
 
 alias luamake=/luamake
