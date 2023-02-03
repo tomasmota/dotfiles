@@ -18,7 +18,8 @@ alias yd='yarn dev'
 alias yf='yarn prettier --write .'
 
 # Files
-alias cdf='cd $(fd --type directory | fzf)'
+alias cdf='cd $(fd --type directory | fzf)' # Fuzzy find tree and cd into folder
+alias nvf='nv $(fzf --height 40 --reverse)' # Fuzzy find tree and open file in neovim
 
 # Chezmoi
 alias cm='chezmoi'
