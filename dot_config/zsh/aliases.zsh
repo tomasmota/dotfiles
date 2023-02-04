@@ -26,5 +26,6 @@ alias cm='chezmoi'
 alias cme='chezmoi edit --apply'
 
 # Generic
+alias tree='tree -I node_modules'
 alias nv='nvim'
 alias k='kubectl'
