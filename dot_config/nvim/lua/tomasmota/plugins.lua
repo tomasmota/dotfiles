@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
         require('nvim-autopairs').setup()
       end
     }
+    use 'windwp/nvim-ts-autotag'
 
     -- Comments
     use {
