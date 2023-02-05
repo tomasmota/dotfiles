@@ -1,6 +1,6 @@
 local configs = require('nvim-treesitter.configs')
 configs.setup {
-    ensure_installed = {"go", "hcl", "rust", "markdown", "gomod", "yaml", "json", "make"},
+    ensure_installed = {"go", "hcl", "rust", "markdown", "gomod", "yaml", "json", "make", "tsx", "typescript"},
     highlight = {
         enable = true,
     },
