@@ -25,6 +25,8 @@ alias nvd='nv $(fd --type directory | fzf)' # Fuzzy find tree and open folder in
 # Chezmoi
 alias cm='chezmoi'
 alias cme='chezmoi edit --apply'
+alias cmgst='chezmoi git status'
+alias cmgd='chezmoi git diff'
 
 # Generic
 alias tree='tree -I node_modules'

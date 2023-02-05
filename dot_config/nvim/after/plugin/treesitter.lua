@@ -1,6 +1,20 @@
 local configs = require('nvim-treesitter.configs')
 configs.setup {
-    ensure_installed = {"go", "hcl", "rust", "markdown", "gomod", "yaml", "json", "make", "tsx", "typescript"},
+    ensure_installed = {
+        "go",
+        "hcl",
+        "rust",
+        "markdown",
+        "gomod",
+        "yaml",
+        "json",
+        "make",
+        "tsx",
+        "typescript",
+        "html",
+        "css",
+        "lua"
+    },
     highlight = {
         enable = true,
     },
@@ -33,5 +47,8 @@ configs.setup {
         enable = true,
         extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
         max_file_lines = 2000, -- Do not enable for files with more than specified lines
+    },
+    autotag = {
+        enable = true,
     },
 }
