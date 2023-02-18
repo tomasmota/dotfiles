@@ -30,5 +30,6 @@ alias cmgd='chezmoi git diff'
 
 # Generic
 alias tree='tree -I node_modules'
+alias t='tree -I node_modules'
 alias nv='nvim'
 alias k='kubectl'
