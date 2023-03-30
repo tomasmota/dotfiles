@@ -9,6 +9,7 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 docker
 fzf
+terraform
 kubectl)
 
 source $ZSH/oh-my-zsh.sh
