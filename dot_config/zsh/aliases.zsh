@@ -5,7 +5,7 @@ alias loadrc="source $XDG_CONFIG_HOME/zsh/.zshrc"
 # Git
 alias gc='git commit --signoff -m'
 alias gpt='git push --tags'
-alias gld='git log -p --oneline'
+alias gld='git log -p --oneline --ext-diff'
 
 # Terraform
 alias tfi='terraform init'
