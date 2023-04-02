@@ -6,5 +6,7 @@
 - ripgrep
 
 # Optional CLIs
-- difft
-- dive
+## difft
+set as default for git diff: `git config --global diff.external difft`
+
+## dive
