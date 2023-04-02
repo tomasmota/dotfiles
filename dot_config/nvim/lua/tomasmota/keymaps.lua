@@ -17,7 +17,7 @@ vim.keymap.set('i', '<C-A>', '<ESC>I')
 
 vim.keymap.set("n", "C-r", ":luafile %<CR>")
 
--- Telescope stuff
+-- TELESCOPE
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files)
 vim.keymap.set('n', '<leader>fa', builtin.live_grep) -- grep across all file in current directory
@@ -29,10 +29,13 @@ vim.keymap.set('n', '<leader>h', builtin.help_tags) -- grep help docs
 vim.keymap.set('n', '<leader>gst', builtin.git_status)
 vim.keymap.set('n', '<c-f>', builtin.current_buffer_fuzzy_find)
 
+-- SNIPS
 local ls = require("luasnip")
 vim.keymap.set({ "i", "s" }, "<c-n>", ls.expand_or_jump)
 vim.keymap.set({ "i", "s" }, "<c-p>", function() ls.jump(-1) end)
 
+-- GIT
 local gs = require("gitsigns")
-vim.keymap.set('n', '<leader>gd', function() gs.diffthis() end)
-vim.keymap.set('n', '<leader>gD', function() gs.diffthis("~") end)
+vim.keymap.set('n', '<leader>gd', ":DiffviewOpen <CR>")
+vim.keymap.set('n', '<leader>gD', ":DiffviewOpen HEAD~1<CR>")
+vim.keymap.set('n', '<leader>gc', ":DiffviewClose <CR>")
