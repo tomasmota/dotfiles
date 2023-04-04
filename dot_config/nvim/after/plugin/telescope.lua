@@ -29,10 +29,10 @@ telescope.setup({
     },
     extensions = {
         live_grep_args = {
-            auto_quoting = true, -- enable/disable auto-quoting
-            mappings = { 
+            auto_quoting = true,
+            mappings = {
                 i = {
-                    ["<C-k>"] = lga_actions.quote_prompt(),
+                    ["<C-k>"] = lga_actions.quote_prompt({ postfix = " -t " }),
                 },
             },
         }
