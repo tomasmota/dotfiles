@@ -1,13 +1,13 @@
-local lsp = require('lsp-zero').preset({
+local lsp = require('lsp-zero')
+
+lsp.preset({
     name = 'minimal',
     manage_nvim_cmp = true,
     suggest_lsp_servers = true,
 })
 
-lsp.nvim_workspace()
-lsp.setup()
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     -- lsp stuff
@@ -38,7 +38,6 @@ cmp.setup({
     completion = { completeopt = "menu,menuone,noinsert" },
     experimental = { ghost_text = true },
 })
-
 
 lsp.configure('gopls', {
     settings = {
@@ -83,3 +82,17 @@ lsp.configure('tsserver', {
         vim.keymap.set("n", "<leader>ff", "<cmd>!yarn prettier --write %<cr><cr>", { noremap = true })
     end,
 })
+
+lsp.configure('yamlls', {
+    settings = {
+        yaml = {
+            schemaStore = {
+                url = "https://www.schemastore.org/api/json/catalog.json",
+                enable = true,
+            },
+            keyOrdering = false
+        },
+    },
+})
+
+lsp.setup()
