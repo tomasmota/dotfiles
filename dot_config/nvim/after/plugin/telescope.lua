@@ -1,8 +1,6 @@
 -- telescope setup --
 local telescope = require('telescope')
-telescope.load_extension('fzf')
-telescope.load_extension('file_browser')
-telescope.load_extension('repo')
+local lga_actions = require("telescope-live-grep-args.actions")
 telescope.setup({
     winblend = 10,
     defaults = {
@@ -28,8 +26,23 @@ telescope.setup({
     layout_config = {
         height = 0.9,
         width = 0.9,
+    },
+    extensions = {
+        live_grep_args = {
+            auto_quoting = true, -- enable/disable auto-quoting
+            mappings = { 
+                i = {
+                    ["<C-k>"] = lga_actions.quote_prompt(),
+                },
+            },
+        }
     }
 })
+
+telescope.load_extension('fzf')
+telescope.load_extension('file_browser')
+telescope.load_extension('repo')
+telescope.load_extension('live_grep_args')
 
 -- Open Telescope find_files when opening nvim with a directory as first argument
 _G.open_telescope = function()
