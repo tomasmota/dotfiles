@@ -20,9 +20,10 @@ vim.keymap.set("n", "C-r", ":luafile %<CR>")
 -- TELESCOPE
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files)
-vim.keymap.set('n', '<leader>fa', builtin.live_grep) -- grep across all files in current directory
+-- vim.keymap.set('n', '<leader>fa', builtin.live_grep) -- grep across all files in current directory
 vim.keymap.set('n', '<leader>fk', builtin.keymaps)
 vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols)
+vim.keymap.set('n', '<leader>fa', require('telescope').extensions.live_grep_args.live_grep_args)
 vim.keymap.set('n', '<leader>fr', require('telescope').extensions.repo.repo)
 vim.keymap.set('n', '<leader>fb', require('telescope').extensions.file_browser.file_browser)
 vim.keymap.set("n", "<leader>le", "<cmd>Telescope diagnostics<cr>")
