@@ -32,3 +32,5 @@ opt.updatetime = 50
 opt.clipboard = "unnamedplus"
 
 opt.signcolumn="yes"
+
+opt.cmdheight=0
