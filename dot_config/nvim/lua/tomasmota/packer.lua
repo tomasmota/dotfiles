@@ -105,7 +105,7 @@ return require('packer').startup(function(use)
     use { 'sindrets/diffview.nvim' }
     ---
 
-    use { 'airblade/vim-rooter' }
+    -- use { 'airblade/vim-rooter' } -- change neovim root, disabled for now
 
     use {
         'nvim-tree/nvim-tree.lua',
