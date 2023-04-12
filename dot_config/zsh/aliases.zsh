@@ -21,7 +21,7 @@ alias yf='yarn prettier --write .'
 
 # Files
 alias cdf='cd $(fd --type directory | fzf)' # Fuzzy find tree and cd into folder
-alias cdr='cd $(fd --search-path ~/repos --search-path ~/dev --type directory --hidden "^\.git$" | xargs -I {} dirname {} | fzf)'
+alias cdr='cd $(fd --search-path ~/dev --type directory --hidden "^\.git$" | xargs -I {} dirname {} | fzf)'
 alias nvf='nv $(fzf)'                       # Fuzzy find tree and open file in neovim
 alias nvd='nv $(fd --type directory | fzf)' # Fuzzy find tree and open folder in neovim
 
@@ -32,7 +32,6 @@ alias cmgst='chezmoi git status'
 alias cmgd='chezmoi git diff'
 
 # Generic
-alias tree='tree -I node_modules'
-alias t='tree -I node_modules'
+alias tree="tree -I 'node_modules|dist|coverage'"
 alias nv='nvim'
 alias k='kubectl'
