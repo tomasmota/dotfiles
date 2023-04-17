@@ -7,6 +7,7 @@ alias gc='git commit --signoff -m'
 alias gpt='git push --tags'
 alias gld='git log -p --oneline --ext-diff'
 alias gD='git diff HEAD~1'
+alias gprune='git remote prune origin && git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|main" | xargs git branch -D'
 
 # Terraform
 alias tfi='terraform init'
