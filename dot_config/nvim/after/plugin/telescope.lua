@@ -18,10 +18,9 @@ telescope.setup({
         --     theme = "ivy",
         --     layout_config = { height = 0.7 },
         -- },
-        -- lsp_document_symbols = {
-        --     theme = "ivy",
-        --     layout_config = { height = 0.7 },
-        -- }
+        lsp_document_symbols = {
+            symbol_width = 70,
+        }
     },
     layout_config = {
         height = 0.9,
