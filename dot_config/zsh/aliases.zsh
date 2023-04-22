@@ -21,10 +21,17 @@ alias yd='yarn dev'
 alias yf='yarn prettier --write .'
 
 # Files
-alias cdf='cd $(fd --type directory | fzf)' # Fuzzy find tree and cd into folder
-alias cdr='cd $(fd --search-path ~/dev --type directory --hidden "^\.git$" | xargs -I {} dirname {} | fzf --preview "tree -C {}")' # Fuzzy find over all repos under ~/dev`
-alias nvf='nv $(fzf --preview "bat --color=always {}")'                       # Fuzzy find tree and open file in neovim
-alias nvd='nv $(fd --type directory | fzf --preview "tree -C {}")' # Fuzzy find tree and open folder in neovim
+# Fuzzy find tree and cd into folder
+alias cdf='cd $(fd --type directory | fzf --preview "tree -I \"node_modules|dist|coverage\" -C {}")' 
+
+# Fuzzy find over all repos under ~/dev`
+alias cdr='cd $(fd --search-path ~/dev --type directory --hidden "^\.git$" | xargs -I {} dirname {} | fzf --preview "tree -I \"node_modules|dist|coverage\" -C {}")' 
+
+# Fuzzy find tree and open file in neovim
+alias nvf='nv $(fzf --preview "bat --color=always {}")'                       
+
+# Fuzzy find tree and open folder in neovim
+alias nvd='nv $(fd --type directory | fzf --preview "tree -I \"node_modules|dist|coverage\" -C {}")' 
 
 # Chezmoi
 alias cm='chezmoi'
