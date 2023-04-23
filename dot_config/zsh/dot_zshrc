@@ -10,6 +10,11 @@ zsh-syntax-highlighting
 docker
 fzf
 terraform
+yarn
+npm
+tmux
+golang
+sudo
 kubectl)
 
 source $ZSH/oh-my-zsh.sh
