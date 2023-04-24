@@ -5,7 +5,7 @@ function delete_tag(){
 }
 
 # sync dotfiles
-function cmpush(){
+function cmsync(){
     chezmoi git pull
     chezmoi apply
 }
