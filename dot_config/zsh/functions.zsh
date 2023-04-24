@@ -4,9 +4,16 @@ function delete_tag(){
     git push --delete origin $1
 }
 
+# sync dotfiles
+function cmpush(){
+    chezmoi git pull
+    chezmoi apply
+}
+
 # push dotfiles
 function cmpush(){
     chezmoi git add .
     chezmoi git -- commit -m "auto"
     chezmoi git push
 }
+

@@ -29,6 +29,7 @@ vim.keymap.set('n', '<leader>fb', require('telescope').extensions.file_browser.f
 vim.keymap.set("n", "<leader>le", "<cmd>Telescope diagnostics<cr>")
 vim.keymap.set('n', '<leader>h', builtin.help_tags) -- grep help docs
 vim.keymap.set('n', '<leader>gst', builtin.git_status)
+vim.keymap.set('n', '<leader>b', builtin.buffers)
 vim.keymap.set('n', '<c-f>', builtin.current_buffer_fuzzy_find)
 
 -- SNIPS

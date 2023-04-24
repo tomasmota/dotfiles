@@ -39,6 +39,13 @@ cmp.setup({
     experimental = { ghost_text = true },
 })
 
+cmp.setup.filetype('markdown', {
+    sources = {
+      { name = 'luasnip' },
+      { name = 'nvim_lsp' },
+    }
+})
+
 lsp.configure('gopls', {
     settings = {
         gopls = {
