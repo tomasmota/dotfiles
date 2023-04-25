@@ -103,6 +103,15 @@ return require('packer').startup(function(use)
         end
     }
     use { 'sindrets/diffview.nvim' }
+
+    use {'rcarriga/nvim-notify'}
+
+    use {
+        'dmmulroy/tsc.nvim',
+        config = function()
+            require('tsc').setup()
+        end
+    }
     ---
 
     -- use { 'airblade/vim-rooter' } -- change neovim root

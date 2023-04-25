@@ -9,14 +9,10 @@ plugins=(git
 z
 zsh-autosuggestions
 zsh-syntax-highlighting
-docker
 fzf
-terraform
-yarn
-npm
-golang
-sudo
-kubectl)
+oc
+kubectl
+docker)
 
 source $ZSH/oh-my-zsh.sh
 
