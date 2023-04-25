@@ -1,6 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME=$HOME/.config
 
+if [ "$TMUX" = "" ]; then tmux; fi
+
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git

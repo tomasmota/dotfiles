@@ -1,6 +1,9 @@
 # dotfiles
 
-# Dependencies for nvim configuration
+# TMUX dependencies
+- tpm, install with `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+# Neovim dependencies
 - fzf
 - fd
 - ripgrep

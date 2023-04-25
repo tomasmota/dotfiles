@@ -13,7 +13,7 @@ function cmsync(){
 # push dotfiles
 function cmpush(){
     chezmoi git add .
-    chezmoi git -- commit -m "auto"
+    chezmoi git -- commit -m "${1:-auto}"
     chezmoi git push
 }
 
