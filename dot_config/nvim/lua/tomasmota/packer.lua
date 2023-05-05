@@ -112,6 +112,11 @@ return require('packer').startup(function(use)
             require('tsc').setup()
         end
     }
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     ---
 
     -- use { 'airblade/vim-rooter' } -- change neovim root
@@ -126,9 +131,9 @@ return require('packer').startup(function(use)
     --     end
     -- }
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
