@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter-context' }
 
     -- Themes
     use 'EdenEast/nightfox.nvim'
@@ -117,6 +118,9 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use {'windwp/nvim-ts-autotag'}
+
     ---
 
     -- use { 'airblade/vim-rooter' } -- change neovim root
