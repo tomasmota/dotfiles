@@ -7,7 +7,6 @@ plugins=(git
 z
 zsh-autosuggestions
 zsh-syntax-highlighting
-fzf
 oc
 kubectl
 docker)
