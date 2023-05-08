@@ -13,7 +13,6 @@ docker)
 
 source $ZSH/oh-my-zsh.sh
 
-bindkey ^n autosuggest-accept # Use <ctrl>n for accepting sugestion
 setopt menu_complete
 
 # ZSH settings (helpful for wsl)
@@ -39,7 +38,7 @@ _fzf_compgen_dir() {
 }
 
 eval "$(starship init zsh)"
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 alias luamake=/luamake
 
