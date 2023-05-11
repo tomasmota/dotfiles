@@ -13,7 +13,6 @@ docker)
 
 source $ZSH/oh-my-zsh.sh
 
-bindkey ^o autosuggest-execute # Use <ctrl>o for accepting suggestion
 setopt menu_complete
 
 # ZSH settings (helpful for wsl)
