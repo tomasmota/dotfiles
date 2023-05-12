@@ -19,3 +19,6 @@ https://github.com/Wilfred/difftastic/
 set as default for git diff: `git config --global diff.external difft`
 
 ## dive
+
+# TODO
+- fix Telescope ui-select
