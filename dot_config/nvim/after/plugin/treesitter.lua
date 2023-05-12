@@ -45,12 +45,14 @@ require'nvim-treesitter.configs'.setup {
             lookahead = true,
             keymaps = {
                 -- You can use the capture groups defined in textobjects.scm
-                ["af"] = "@function.outer",
-                ["if"] = "@function.inner",
-                ["ab"] = "@block.inner",
-                ["ib"] = "@block.inner",
+                ["af"] = { query = "@function.outer", desc = "around function" },
+                ["if"] = { query = "@function.inner", desc = "inside function" },
+                ["ab"] = { query = "@block.inner", desc = "around block" },
+                ["ib"] = { query = "@block.inner", desc = "inside block" },
+                ["ap"] = { query = "@parameter.outer", desc = "around parameter" },
+                ["ip"] = { query = "@parameter.inner", desc = "inside a parameter" },
             },
-            include_surrounding_whitespace = true,
+            include_surrounding_whitespace = false,
         },
     },
     rainbow = {

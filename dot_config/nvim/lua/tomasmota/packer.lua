@@ -15,8 +15,15 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use { 'nvim-treesitter/nvim-treesitter-context' }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        requires = {
+            {'nvim-treesitter/nvim-treesitter-textobjects' },
+            {'nvim-treesitter/nvim-treesitter-context' },
+            { 'nvim-treesitter/playground' }
+        },
+        run = ':TSUpdate'
+    }
 
     -- Themes
     use 'EdenEast/nightfox.nvim'
