@@ -51,6 +51,8 @@ require'nvim-treesitter.configs'.setup {
                 ["ib"] = { query = "@block.inner", desc = "inside block" },
                 ["ap"] = { query = "@parameter.outer", desc = "around parameter" },
                 ["ip"] = { query = "@parameter.inner", desc = "inside a parameter" },
+                ["ai"] = { query = "@conditional.outer", desc = "around an if statement" },
+                ["ii"] = { query = "@conditional.inner", desc = "inside if statement" },
             },
             include_surrounding_whitespace = false,
         },
