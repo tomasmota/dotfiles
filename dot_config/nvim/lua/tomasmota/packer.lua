@@ -33,7 +33,11 @@ return require('packer').startup(function(use)
     -- requires https://github.com/sharkdp/fd (sudo apt install fd-find)
     use {
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'}, { "nvim-telescope/telescope-live-grep-args.nvim" } }
+        requires = { 
+            {'nvim-lua/plenary.nvim'},
+            { 'nvim-telescope/telescope-live-grep-args.nvim' },
+            { 'nvim-telescope/telescope-ui-select.nvim' },
+        }
     }
     -- requires locate (sudo apt install locate)
     use 'cljoly/telescope-repo.nvim'

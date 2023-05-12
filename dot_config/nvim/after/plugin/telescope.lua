@@ -1,6 +1,11 @@
 -- telescope setup --
 local telescope = require('telescope')
 local lga_actions = require("telescope-live-grep-args.actions")
+telescope.load_extension('fzf')
+telescope.load_extension('file_browser')
+telescope.load_extension('repo')
+telescope.load_extension('live_grep_args')
+telescope.load_extension('ui-select')
 telescope.setup({
     winblend = 10,
     defaults = {
@@ -34,14 +39,24 @@ telescope.setup({
                     ["<C-k>"] = lga_actions.quote_prompt({ postfix = " -t " }),
                 },
             },
-        }
+        },
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown({
+                previewer        = false,
+                initial_mode     = "normal",
+                sorting_strategy = 'ascending',
+                layout_strategy  = 'horizontal',
+                layout_config    = {
+                    horizontal = {
+                        width = 0.5,
+                        height = 0.4,
+                        preview_width = 0.6,
+                    },
+                },
+            })
+        },
     }
 })
-
-telescope.load_extension('fzf')
-telescope.load_extension('file_browser')
-telescope.load_extension('repo')
-telescope.load_extension('live_grep_args')
 
 -- Open Telescope find_files when opening nvim with a directory as first argument
 _G.open_telescope = function()
