@@ -18,9 +18,10 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         requires = {
-            {'nvim-treesitter/nvim-treesitter-textobjects' },
-            {'nvim-treesitter/nvim-treesitter-context' },
-            { 'nvim-treesitter/playground' }
+            { 'nvim-treesitter/nvim-treesitter-textobjects' },
+            { 'nvim-treesitter/nvim-treesitter-context' },
+            { 'nvim-treesitter/playground' },
+            { 'JoosepAlviste/nvim-ts-context-commentstring' }
         },
         run = ':TSUpdate'
     }
@@ -33,22 +34,23 @@ return require('packer').startup(function(use)
     -- requires https://github.com/sharkdp/fd (sudo apt install fd-find)
     use {
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
-        requires = { 
+        requires = {
             {'nvim-lua/plenary.nvim'},
             { 'nvim-telescope/telescope-live-grep-args.nvim' },
             { 'nvim-telescope/telescope-ui-select.nvim' },
+            { 'nvim-telescope/telescope-file-browser.nvim' },
+            { 'cljoly/telescope-repo.nvim'},
+            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         }
     }
-    -- requires locate (sudo apt install locate)
-    use 'cljoly/telescope-repo.nvim'
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use 'nvim-telescope/telescope-file-browser.nvim'
 
     -- Comments
     use {
         'numToStr/Comment.nvim',
         config = function()
-            require('Comment').setup()
+            require('Comment').setup{
+                pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+            }
         end
     }
 
@@ -119,32 +121,13 @@ return require('packer').startup(function(use)
     use {'rcarriga/nvim-notify'}
 
     use {
-        'dmmulroy/tsc.nvim',
-        config = function()
-            require('tsc').setup()
-        end
-    }
-
-    use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
 
     use {'windwp/nvim-ts-autotag'}
 
-    ---
-
     -- use { 'airblade/vim-rooter' } -- change neovim root
-
-    -- use {
-    --     'nvim-tree/nvim-tree.lua',
-    --     requires = {
-    --         'nvim-tree/nvim-web-devicons',
-    --     },
-    --     config = function()
-    --         require("nvim-tree").setup {}
-    --     end
-    -- }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
