@@ -60,7 +60,8 @@ lsp.configure('gopls', {
     },
     init_options = {
         usePlaceholders = true,
-    }
+    },
+    vim.keymap.set("n", "<leader>ff", "<cmd>!go fmt %<cr><cr>", { noremap = true })
 })
 
 -- https://github.com/hashicorp/terraform-ls
