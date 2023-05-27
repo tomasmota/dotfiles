@@ -64,7 +64,7 @@ lsp.configure('gopls', {
     vim.keymap.set("n", "<leader>ff", "<cmd>!go fmt %<cr><cr>", { noremap = true })
 })
 
-lsp.configure('lix', {
+lsp.configure('nil_ls', {
     on_attach = function()
         vim.o.tabstop = 2
         vim.o.softtabstop = 2
