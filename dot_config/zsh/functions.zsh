@@ -25,8 +25,8 @@ function nvg(){
     fi
 }
 
-function nvf2(){
-    file=$(fzf --preview "bat --color=always {}")
+function nvf(){
+    file=$(fd --type file $1 | fzf --preview "bat --color=always {}")
     if [[ -n $file ]]; then
         nv $file
     fi
