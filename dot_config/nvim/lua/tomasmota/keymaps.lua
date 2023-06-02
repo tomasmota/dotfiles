@@ -45,3 +45,6 @@ vim.keymap.set('n', '<leader>gd', ":DiffviewOpen <CR>")
 vim.keymap.set('n', '<leader>gD', ":DiffviewOpen HEAD~1<CR>")
 vim.keymap.set('n', '<leader>gc', ":DiffviewClose <CR>")
 vim.keymap.set('n', '<leader>gb', function () gs.blame_line() end)
+
+-- CHEZMOI
+vim.keymap.set('n', '<leader>cma', ":! chezmoi apply<CR><CR>")
