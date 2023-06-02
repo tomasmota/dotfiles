@@ -19,7 +19,7 @@ function cmpush(){
 
 # open files based on ripgrep search
 function nvg(){
-    nv $(rg $1 -l | fzf --preview "bat --color=always {}") 
+    nv $(rg $1 -l | fzf --preview "bat --color=always {}")  -c "/$1"
 }
 
 function nvga(){
