@@ -19,5 +19,11 @@ function cmpush(){
 
 # open files based on ripgrep search
 function nvg(){
-    nv $(rg $1 -l | fzf) 
+    nv $(rg $1 -l | fzf --preview "bat --color=always {}") 
+}
+
+function nvga(){
+    if [ $# -eq 0 ]; then
+        echo "no args"       
+    fi
 }
