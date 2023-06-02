@@ -17,3 +17,7 @@ function cmpush(){
     chezmoi git push
 }
 
+# open files based on ripgrep search
+function nvg(){
+    nv $(rg $1 -l | fzf) 
+}
