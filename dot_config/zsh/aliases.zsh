@@ -36,7 +36,11 @@ alias cme='chezmoi edit --apply'
 alias cmgst='chezmoi git status'
 alias cmgd='chezmoi git diff'
 
+# Nix
+alias nixs='nix search nixpkgs'
+
 # Generic
 alias tree="tree -I 'node_modules|dist|coverage'"
 alias nv='nvim'
 alias k='kubectl'
+
