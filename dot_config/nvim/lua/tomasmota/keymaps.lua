@@ -16,8 +16,13 @@ vim.keymap.set('i', '<C-E>', '<ESC>A')
 vim.keymap.set('i', '<C-A>', '<ESC>I')
 
 vim.keymap.set("n", "C-r", ":luafile %<CR>")
+
 -- If I visually select words and paste from clipboard, don't replace existing clip
 vim.keymap.set("x", "p", "\"_dP")
+
+-- Stay in visual mode when changing the indent for the selection
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
 
 -- TELESCOPE
 local builtin = require('telescope.builtin')
