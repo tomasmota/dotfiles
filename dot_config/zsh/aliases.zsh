@@ -37,7 +37,8 @@ alias cmgst='chezmoi git status'
 alias cmgd='chezmoi git diff'
 
 # Nix
-alias nixs='nix search nixpkgs'
+alias nixsearch='nix search nixpkgs'
+alias nixrun='nix run nixpkgs#'
 
 # Generic
 alias tree="tree -I 'node_modules|dist|coverage'"
