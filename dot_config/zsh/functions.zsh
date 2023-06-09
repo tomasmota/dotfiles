@@ -32,3 +32,6 @@ function nvf(){
     fi
 }
 
+function nixrun(){
+    nix run nixpkgs#$1
+}
