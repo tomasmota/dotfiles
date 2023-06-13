@@ -44,4 +44,4 @@ alias nixsearch='nix search nixpkgs'
 alias tree="tree -I 'node_modules|dist|coverage'"
 alias nv='nvim'
 alias k='kubectl'
-
+alias dra='direnv allow'
