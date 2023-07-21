@@ -19,6 +19,7 @@ alias tfv='terraform validate'
 
 # Yarn
 alias yd='yarn dev'
+alias yi='yarn install'
 alias yf='yarn prettier --write .'
 
 # Files
