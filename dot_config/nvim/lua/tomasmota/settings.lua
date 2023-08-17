@@ -24,13 +24,10 @@ o.swapfile = false
 
 -- set termguicolors to enable highlight groups
 opt.termguicolors = true
-
 opt.updatetime = 50
-
 -- Use system clipboard: https://github.com/neovim/neovim/wiki/FAQ#how-to-use-the-windows-clipboard-from-wsl
 -- Install win32yank.exe, put this in, and nothing else
 opt.clipboard = "unnamedplus"
-
 opt.signcolumn="yes"
-
+opt.splitright=true
 opt.cmdheight=0

@@ -24,6 +24,9 @@ vim.keymap.set("x", "p", "\"_dP")
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
+-- Go to definition in new split
+vim.keymap.set('n', 'gv', "<cmd>:vsplit<cr>gd")
+
 -- TELESCOPE
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files)

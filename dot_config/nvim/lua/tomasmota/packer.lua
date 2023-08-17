@@ -127,6 +127,8 @@ return require('packer').startup(function(use)
 
     use {'windwp/nvim-ts-autotag'}
 
+    use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
+
     -- use { 'airblade/vim-rooter' } -- change neovim root
 
     -- Automatically set up your configuration after cloning packer.nvim
