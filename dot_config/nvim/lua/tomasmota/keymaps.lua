@@ -10,6 +10,8 @@ vim.keymap.set('n', '<C-l>', ':nohlsearch<CR>')
 
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Mimic shell movements
 vim.keymap.set('i', '<C-E>', '<ESC>A')
