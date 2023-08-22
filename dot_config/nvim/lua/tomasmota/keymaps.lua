@@ -27,7 +27,10 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
 -- Go to definition in new split
-vim.keymap.set('n', 'gv', "<cmd>:vsplit<cr>gd")
+vim.keymap.set('n', 'gv', ":vsplit<cr>gd")
+
+-- Go to definition in new split
+vim.keymap.set('n', '<C-n>', ":bnext<cr>")
 
 -- TELESCOPE
 local builtin = require('telescope.builtin')
