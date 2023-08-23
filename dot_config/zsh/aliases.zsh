@@ -26,7 +26,7 @@ alias yf='yarn prettier --write .'
 # Fuzzy find tree and cd into folder
 alias cdf='cd $(fd --type directory | fzf --preview "tree -I \"node_modules|dist|coverage\" -C {}")' 
 
-# Fuzzy find over all repos under ~/dev`
+# Fuzzy find over all repos under ~/dev
 alias cdr='cd $(fd --search-path ~/dev --type directory --hidden "^\.git$" | xargs -I {} dirname {} | fzf --preview "tree -I \"node_modules|dist|coverage\" -C {}")' 
 
 # Fuzzy find tree and open folder in neovim
@@ -46,3 +46,5 @@ alias tree="tree -I 'node_modules|dist|coverage'"
 alias nv='nvim'
 alias k='kubectl'
 alias dra='direnv allow'
+alias lg='fd --type=d --max-depth=1'
+
