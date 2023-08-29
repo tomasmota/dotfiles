@@ -129,7 +129,12 @@ return require('packer').startup(function(use)
 
     use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
 
-    -- use { 'airblade/vim-rooter' } -- change neovim root
+    use {
+        'lvimuser/lsp-inlayhints.nvim',
+        config = function()
+            require('lsp-inlayhints').setup()
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
